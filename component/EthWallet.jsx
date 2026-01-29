@@ -8,7 +8,7 @@ export const EthWallet = ({mnemonic}) => {
 
     return (
         <div>
-            <button onClick={async function() {
+            <button className="rounded-2xl px-3 h-10 bg-blue-800 text-white" onClick={async function() {
                 const seed = await mnemonicToSeed(mnemonic);
                 const derivationPath = `m/44'/60'/${currentIndex}'/0'`;
                  const hdNode = HDNodeWallet.fromSeed(seed);
